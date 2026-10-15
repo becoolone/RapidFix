@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapid Fix Plumbing Edinburgh | Expert Plumbing Services 24/7</title>
+<meta name="description" content="No drip too small. Rapid Fix Plumbing offers same-day, 24/7 emergency and non-emergency plumbing in Edinburgh. Free quotes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Rapid Fix Plumbing - single file (HTML + CSS together)
+   PHOTOS: every photo area falls back to a gradient. To use real
+   photos, put them in an /images folder next to this file:
+     hero.jpg
+     work-1.jpg ... work-6.jpg
+     before-1.jpg, after-1.jpg, before-2.jpg, after-2.jpg
+   ============================================================ */
+:root{
+  --navy:#22243A;
+  --deep:#161829;
+  --ink:#1E2033;
+  --muted:#5B6076;
+  --orange:#F26A21;
+  --tint:#E8EEF8;
+  --lav:#CDD3E6;
+  --line:#E1E6F1;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:8px}
+
+.page{max-width:1320px;margin:0 auto;padding:16px}
+.wrap{padding:0 clamp(16px,4vw,48px)}
+
+/* ---------- shared bits ---------- */
+.label{display:inline-block;border:1px solid #D3D8E6;border-radius:999px;padding:7px 16px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);background:#fff}
+.h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,58px);line-height:1.06;letter-spacing:-.02em;margin:18px 0 0}
+.o{color:var(--orange)}
+.lead{color:var(--muted);font-size:17px;margin:18px 0 0}
+.btn{display:inline-flex;align-items:center;gap:16px;border-radius:999px;padding:6px 6px 6px 26px;min-height:52px;font-weight:600;font-size:15px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(34,36,58,.18)}
+.btn.dark{background:var(--navy);color:#fff}
+.btn.white{background:#fff;color:var(--navy)}
+.ico{width:42px;height:42px;border-radius:50%;background:var(--orange);display:grid;place-items:center;flex:none}
+.ico svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px;margin-bottom:40px}
+.head .lead{max-width:44ch;margin:0}
+
+/* ---------- section divider ---------- */
+.divider{display:flex;align-items:center;gap:18px;margin:72px 0 0}
+.divider::before,.divider::after{content:"";flex:1;height:2px;border-radius:2px;background:#C3CCE0}
+.divider span{width:38px;height:38px;border-radius:50%;flex:none;border:2px solid #C3CCE0;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F26A21' d='M12 2.5c3.3 4.2 6 7.3 6 11a6 6 0 0 1-12 0c0-3.7 2.7-6.8 6-11z'/%3E%3C/svg%3E") center/16px no-repeat}
+.divider.last{margin:72px clamp(16px,4vw,48px) 40px}
+
+/* ---------- header ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:6px 8px 18px;position:relative}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:26px;letter-spacing:-.01em;line-height:1}
+.logo small{display:block;margin-top:5px;font-family:var(--sans);font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.drop{width:38px;height:38px;border-radius:12px;background:var(--navy);display:grid;place-items:center;flex:none}
+.drop svg{width:20px;height:20px;fill:var(--orange)}
+.pillnav{display:flex;gap:4px;background:var(--tint);border-radius:999px;padding:8px}
+.pillnav a{padding:10px 20px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink)}
+.pillnav a.on,.pillnav a:hover{background:#fff}
+.mnav{display:none}
+.mnav summary{list-style:none;cursor:pointer;background:var(--tint);border-radius:999px;padding:12px 20px;font-weight:600;font-size:14px}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav div{position:absolute;right:8px;top:70px;z-index:5;background:#fff;border:1px solid var(--line);border-radius:20px;padding:10px;min-width:210px;box-shadow:0 18px 40px rgba(34,36,58,.18)}
+.mnav div a{display:block;padding:12px 16px;border-radius:12px;font-weight:500}
+.mnav div a:hover{background:var(--tint)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;border-radius:32px;overflow:hidden;min-height:700px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:end;padding:clamp(24px,4vw,48px);color:#fff;
+  background-color:#0d2a4a;
+  background-image:
+    linear-gradient(90deg,rgba(13,42,74,.85) 0%,rgba(13,42,74,.75) 35%,rgba(13,42,74,.45) 65%,rgba(13,42,74,.25) 100%),
+    linear-gradient(180deg,rgba(7,22,40,.15) 0%,rgba(7,22,40,.15) 40%,rgba(7,22,40,.82) 100%),
+    url("cover2.jpg"),
+    radial-gradient(circle at 18% 22%,rgba(95,170,255,.45),transparent 42%),
+    radial-gradient(circle at 80% 70%,rgba(242,106,33,.22),transparent 40%),
+    linear-gradient(135deg,#1d5a94 0%,#0d2a4a 60%,#081a30 100%);
+  background-size:cover;background-position:center}
+.hero-copy{align-self:end;padding-bottom:8px}
+.tag{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:8px 18px;font-size:14px;font-weight:600}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--orange);display:block}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(46px,6.4vw,92px);line-height:1;letter-spacing:-.025em;margin:22px 0 0;max-width:11ch}
+.hero p{font-size:clamp(16px,1.6vw,19px);margin:20px 0 0;max-width:46ch;color:#E6EEF9}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
+.chips{display:flex;flex-wrap:wrap;gap:8px 10px}
+.chips span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600}
+
+.quote{background:#fff;color:var(--ink);border-radius:26px;padding:28px clamp(20px,3vw,32px) 30px;border-bottom:4px solid var(--orange);box-shadow:0 30px 60px rgba(0,0,0,.28);align-self:center}
+.quote h2{font-size:clamp(22px,2.2vw,28px);line-height:1.15;text-align:center;margin:0 0 6px;font-weight:700;letter-spacing:-.01em}
+.quote .sub{margin:0 0 18px;text-align:center;font-size:14px;color:var(--muted)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.field{display:flex;flex-direction:column;margin-bottom:12px}
+.field label{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.field input,.field select,.field textarea{width:100%;border:0;border-bottom:1.5px solid #C9D0E0;background:transparent;padding:9px 0 10px;font:500 15px var(--sans);color:var(--ink);border-radius:0}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235B6076' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 2px center}
+.field textarea{resize:vertical;min-height:72px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--orange)}
+.submit{width:100%;margin-top:6px;border:0;border-radius:999px;background:var(--orange);color:var(--navy);font:700 16px var(--sans);padding:16px 20px;min-height:54px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.submit:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(242,106,33,.4)}
+.quote .note{margin:14px 0 0;text-align:center;font-size:13px;color:var(--muted)}
+.quote .note a{color:var(--navy);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- about ---------- */
+.about{padding:72px 0 40px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.about .h2{max-width:14ch}
+.about .lead{margin-top:0}
+.about .lead+.lead{margin-top:14px}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:24px 0 8px}
+.stat{background:var(--tint);border-radius:22px;padding:28px 28px 26px}
+.stat b{display:block;font-family:var(--serif);font-weight:500;font-size:clamp(44px,5vw,66px);line-height:1;letter-spacing:-.02em}
+.stat span{display:block;margin-top:14px;font-size:15px;font-weight:500;color:var(--muted)}
+
+/* ---------- services ---------- */
+.services{padding:72px 0 0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s,border-color .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-4px);border-color:var(--orange);box-shadow:0 18px 36px rgba(34,36,58,.1)}
+.svc .n{width:40px;height:40px;border-radius:50%;background:var(--tint);display:grid;place-items:center;font-weight:700;font-size:13px;color:var(--navy)}
+.svc h3{margin:0;font-size:21px;font-weight:600;line-height:1.25;letter-spacing:-.01em}
+.svc.hot{grid-column:span 2;background:var(--navy);color:#fff;border-color:var(--navy);background-image:radial-gradient(circle at 100% 0%,rgba(242,106,33,.4),transparent 55%)}
+.svc.hot .n{background:var(--orange);color:var(--navy)}
+.svc.hot h3{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,36px);line-height:1.1}
+.svc.hot p{margin:10px 0 0;color:#C9D2E6;font-size:15px}
+.svc-more{cursor:pointer;background:var(--tint);border-color:var(--tint)}
+.svc-more:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.svc-more:hover .n{background:#fff;color:var(--orange)}
+.svc-hidden{display:none}
+.grid.show-all .svc-hidden{display:flex}
+.fine{margin:22px 0 0;color:var(--muted);font-size:15px}
+
+/* ---------- work samples ---------- */
+.work{padding:72px 0 0}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:280px;gap:16px}
+.tile{border-radius:28px;display:flex;align-items:flex-end;padding:18px;background-size:cover;background-position:center;color:#fff;overflow:hidden;grid-column:span 1}
+.tile:nth-child(1){background-image:linear-gradient(180deg,rgba(7,22,40,0) 50%,rgba(7,22,40,.55)),url("1.jpg"),linear-gradient(135deg,#1d5a94,#0d2a4a)}
+.tile:nth-child(2){background-image:linear-gradient(180deg,rgba(7,22,40,0) 50%,rgba(7,22,40,.55)),url("2.jpg"),linear-gradient(160deg,#22243A,#3a3f66)}
+.tile:nth-child(3){background-image:linear-gradient(180deg,rgba(7,22,40,0) 50%,rgba(7,22,40,.55)),url("3.jpg"),linear-gradient(135deg,#2f6fb0,#16365c)}
+.tile:nth-child(4){background-image:linear-gradient(180deg,rgba(7,22,40,0) 50%,rgba(7,22,40,.55)),url("4.jpg"),linear-gradient(135deg,#d9561a,#7c2c0c)}
+.tile span{background:rgba(255,255,255,.92);color:var(--navy);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600}
+
+/* ---------- contact ---------- */
+.contact{padding:72px 0 0;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.contact .lead{max-width:44ch}
+.info{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:22px}
+.info li{display:flex;align-items:center;gap:16px}
+.info .ci{width:50px;height:50px;border-radius:50%;background:var(--tint);display:grid;place-items:center;flex:none}
+.info .ci svg{width:22px;height:22px;stroke:var(--navy);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.info small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.info b,.info a{font-size:18px;font-weight:600;overflow-wrap:anywhere}
+.info a:hover{color:var(--orange)}
+.cform{background:var(--tint);border-radius:28px;padding:clamp(22px,3.4vw,40px)}
+.cform h3{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,36px);margin:0 0 4px;letter-spacing:-.01em}
+.cform .sub{margin:0 0 22px;color:var(--muted);font-size:15px}
+.cform .field{margin-bottom:16px}
+.cform .field label{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.cform .field input,.cform .field textarea{background:#fff;border:1.5px solid #C9D0E0;border-radius:14px;padding:14px 16px;font-size:16px}
+.cform .field input:focus,.cform .field textarea:focus{border-color:var(--orange)}
+.cform .field textarea{min-height:130px}
+.cform .submit{width:auto;min-width:200px;padding:16px 36px}
+
+/* ---------- footer ---------- */
+.foot{background:var(--deep);color:#C9D2E6;border-radius:28px;padding:clamp(28px,5vw,56px) clamp(22px,5vw,56px) 24px}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:clamp(28px,4vw,56px)}
+.foot .logo{color:#fff}
+.foot .logo small{color:#8E99B3}
+.foot .about-text{margin:18px 0 0;max-width:34ch;font-size:15px}
+.foot h4{margin:0 0 16px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15px}
+.foot a:hover{color:var(--orange)}
+.fsocial{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.fsocial a{border:1.5px solid #3A3E5C;border-radius:999px;padding:9px 18px;font-size:14px;font-weight:600;color:#fff}
+.fsocial a:hover{border-color:var(--orange);color:var(--orange)}
+.fbar{margin-top:44px;padding-top:22px;border-top:1px solid #2E3150;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font-size:14px;color:#8E99B3}
+.fbar nav{display:flex;flex-wrap:wrap;gap:8px 24px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:960px){
+  .pillnav{display:none}
+  .mnav{display:block}
+  .hero{grid-template-columns:1fr;min-height:0;align-items:start;padding-top:56px}
+  .hero-copy{padding-bottom:0}
+  .about,.contact{grid-template-columns:1fr}
+  .about{padding-top:48px}
+  .tiles{grid-template-columns:repeat(2,1fr);grid-auto-rows:240px}
+  .tile:nth-child(n){grid-column:span 1}
+}
+@media (max-width:640px){
+  .page{margin:0;border-radius:0;padding:10px}
+  .top .btn{display:none}
+  .row{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .svc.hot{grid-column:span 1}
+  .svc:nth-child(n+5):not(.svc-more){display:none}
+  .grid.show-all .svc:nth-child(n+5):not(.svc-more){display:flex}
+  .stats{grid-template-columns:1fr 1fr;gap:12px}
+  .stat{padding:22px 20px}
+  .tiles{grid-template-columns:1fr}
+  .tile:nth-child(n){grid-column:span 1}
+  .services,.work,.contact{padding-top:48px}
+  .divider{margin-top:48px}
+  .divider.last{margin:48px 16px 28px}
+  .fgrid{grid-template-columns:1fr}
+  .cform .submit{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="page" id="top">
+
+  <!-- ===== HEADER ===== -->
+  <header class="top">
+    <a class="logo" href="#top" aria-label="Rapid Fix Plumbing Edinburgh, home" style="gap:14px">
+      <img src="logo.png" alt="Rapid Fix Plumbing" style="height: 50px; width: auto;">
+      <span style="font-family:var(--serif);font-weight:600;font-size:24px;line-height:1;letter-spacing:-.01em">Rapid Fix<br><span style="font-family:var(--sans);font-size:14px;font-weight:500;color:var(--muted)">Plumbing Edinburgh</span></span>
+    </a>
+    <nav class="pillnav" aria-label="Main">
+      <a class="on" href="#top">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work Samples</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <details class="mnav">
+      <summary>Menu</summary>
+      <div>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work Samples</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+447438694102">Call +44 7438 694102</a>
+      </div>
+    </details>
+    <a class="btn dark" href="#quote">Get a free quote
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+    </a>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-copy">
+      <span class="tag"><i></i>No drip too small</span>
+      <h1>Expert Plumbing Services 24/7</h1>
+      <p>Your local, trusted plumbing service in Edinburgh. Same-day service, 7 days a week, for emergency and non-emergency jobs alike.</p>
+      <div class="hero-actions">
+        <a class="btn white" href="tel:+447438694102">+44 7438 694102
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+        </a>
+        <a class="btn white" href="https://wa.me/447438694102">WhatsApp
+          <span class="ico" style="background:#25D366" aria-hidden="true"><img src="whatsapp.png" alt="" style="width:32px;height:32px;margin:auto"></span>
+        </a>
+        <div class="chips" aria-label="Highlights">
+          <span>24 hour emergency leak service</span>
+          <span>Free quotes</span>
+          <span>Card &amp; debit accepted</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="quote" id="quote" action="mailto:Jay@rapidfixplumbing.uk" method="post" enctype="text/plain">
+      <h2>Get Your Free Plumbing Quote Today!</h2>
+      <p class="sub">Tell us what's wrong and we'll get back to you.</p>
+      <div class="field">
+        <label for="f-name">Your name</label>
+        <input id="f-name" name="Name" type="text" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="f-email">Email address *</label>
+        <input id="f-email" name="Email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-service">What do you need help with?</label>
+        <select id="f-service" name="Service">
+          <option>Emergency leak</option>
+          <option>Taps</option>
+          <option>Toilet flush</option>
+          <option>Blocked sink or pipes</option>
+          <option>Shower</option>
+          <option>Tank or cylinder</option>
+          <option>Immersion heater</option>
+          <option>Stopcock</option>
+          <option>Overflow</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-msg">Your message</label>
+        <textarea id="f-msg" name="Message"></textarea>
+      </div>
+      <button class="submit" type="submit">Get our free quote</button>
+      <p class="note">Got photos of the problem? Send them on <a href="https://wa.me/447438694102">WhatsApp</a>.</p>
+    </form>
+  </section>
+
+  <div class="wrap">
+
+    <div class="divider" aria-hidden="true"><span></span></div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+      <div>
+        <span class="label">About us</span>
+        <h2 class="h2">Your Trusted <span class="o">Local</span> Plumbing Service</h2>
+      </div>
+      <div>
+        <p class="lead">Hello, we are Rapid Fix Plumbing. We offer same-day service 7 days a week and specialise in all aspects of 24/7 emergency and non-emergency plumbing jobs, services, problems and repairs. We are on call and awaiting your call.</p>
+        <p class="lead">We stay in constant communication with our customers until the job is done, and we take all kinds of credit and debit card payments.</p>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="At a glance">
+      <div class="stat"><b>24/7</b><span>Emergency service</span></div>
+      <div class="stat"><b>7 days</b><span>Same-day service, every week</span></div>
+      <div class="stat"><b>Free</b><span>Quotes, just give us a call</span></div>
+      <div class="stat"><b>Cards</b><span>Credit and debit accepted</span></div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span></div>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+      <div class="head">
+        <div>
+          <span class="label">Services</span>
+          <h2 class="h2">From a dripping tap to a <span class="o">burst pipe</span></h2>
+        </div>
+        <p class="lead">These are just some of the plumbing jobs we take on. If you don't see yours, get in touch.</p>
+      </div>
+      <div class="grid">
+        <article class="svc hot">
+          <span class="n">24</span>
+          <div>
+            <h3>24 hour emergency leak service</h3>
+            <p>Water where it shouldn't be? We're on call.</p>
+          </div>
+        </article>
+        <article class="svc"><span class="n">01</span><h3>Taps</h3></article>
+        <article class="svc"><span class="n">02</span><h3>Toilet flushes</h3></article>
+        <article class="svc"><span class="n">03</span><h3>Leaks</h3></article>
+        <article class="svc"><span class="n">04</span><h3>Cylinders</h3></article>
+        <article class="svc svc-more" onclick="this.parentElement.classList.toggle('show-all');this.style.display='none'">
+          <span class="n">+</span>
+          <h3>See more services</h3>
+        </article>
+        <article class="svc svc-hidden"><span class="n">05</span><h3>Tanks</h3></article>
+        <article class="svc svc-hidden"><span class="n">06</span><h3>Immersion heaters</h3></article>
+        <article class="svc svc-hidden"><span class="n">07</span><h3>Stopcocks</h3></article>
+        <article class="svc svc-hidden"><span class="n">08</span><h3>Overflows</h3></article>
+        <article class="svc svc-hidden"><span class="n">09</span><h3>Showers</h3></article>
+        <article class="svc svc-hidden"><span class="n">10</span><h3>Blocked sinks and pipes</h3></article>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span></div>
+
+    <!-- ===== WORK SAMPLES ===== -->
+    <section class="work" id="work">
+      <div class="head">
+        <div>
+          <span class="label">Work samples</span>
+          <h2 class="h2">See our <span class="o">plumbing work</span></h2>
+        </div>
+        <p class="lead">A look at some of the jobs we've completed.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile"><span>Work sample 1</span></div>
+        <div class="tile"><span>Work sample 2</span></div>
+        <div class="tile"><span>Work sample 3</span></div>
+        <div class="tile"><span>Work sample 4</span></div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span></div>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <div>
+        <span class="label">Contact us</span>
+        <h2 class="h2">Get in <span class="o">touch</span></h2>
+        <p class="lead">For a free quote, or if you have questions or special requests, call, message or email us. We stay in constant communication until the job is done.</p>
+        <ul class="info">
+          <li>
+            <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+            <div><small>Phone</small><a href="tel:+447438694102">+44 7438 694102</a></div>
+          </li>
+          <li>
+            <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></svg></span>
+            <div><small>WhatsApp</small><a href="https://wa.me/447438694102">Message us on WhatsApp</a></div>
+          </li>
+          <li>
+            <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div><small>Email</small><a href="mailto:Jay@rapidfixplumbing.uk">Jay@rapidfixplumbing.uk</a></div>
+          </li>
+          <li>
+            <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div><small>Opening hours</small><b>24/7 emergency service, same-day 7 days a week</b></div>
+          </li>
+          <li>
+            <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+            <div><small>Based in</small><b>Edinburgh</b></div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="cform" action="mailto:Jay@rapidfixplumbing.uk" method="post" enctype="text/plain">
+        <h3>Send us a message</h3>
+        <p class="sub">Fill in the form and we'll get back to you.</p>
+        <div class="row">
+          <div class="field">
+            <label for="c-name">Name</label>
+            <input id="c-name" name="Name" type="text" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="c-phone">Phone (optional)</label>
+            <input id="c-phone" name="Phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="c-email">Email *</label>
+          <input id="c-email" name="Email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="c-address">Address (street, city, postcode) (optional)</label>
+          <input id="c-address" name="Address" type="text" autocomplete="street-address">
+        </div>
+        <div class="field">
+          <label for="c-msg">How can we help?</label>
+          <textarea id="c-msg" name="Message"></textarea>
+        </div>
+        <button class="submit" type="submit">Send message</button>
+      </form>
+    </section>
+
+  </div>
+
+  <div class="divider last" aria-hidden="true"><span></span></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="foot">
+    <div class="fgrid">
+      <div>
+        <a class="logo" href="#top" aria-label="Rapid Fix Plumbing Edinburgh, back to top">
+          <span class="drop" aria-hidden="true" style="background:#2E3150"><svg viewBox="0 0 24 24"><path d="M12 2.5c3.3 4.2 6 7.3 6 11a6 6 0 0 1-12 0c0-3.7 2.7-6.8 6-11z"/></svg></span>
+          <span>Rapid Fix<small>Plumbing &middot; Edinburgh</small></span>
+        </a>
+        <p class="about-text">No drip too small. Expert plumbing services 24/7, with same-day service 7 days a week.</p>
+        <div class="fsocial">
+          <a href="https://www.facebook.com/rapidfixplumbing">Facebook</a>
+          <a href="https://www.tiktok.com/@rapidfixplumbing">TikTok</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work Samples</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Emergency leak service</a></li>
+          <li><a href="#services">Taps</a></li>
+          <li><a href="#services">Toilet flushes</a></li>
+          <li><a href="#services">Showers</a></li>
+          <li><a href="#services">Blocked sinks and pipes</a></li>
+          <li><a href="#services">Cylinders and immersion heaters</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+447438694102">+44 7438 694102</a></li>
+          <li><a href="https://wa.me/447438694102">WhatsApp</a></li>
+          <li><a href="mailto:Jay@rapidfixplumbing.uk">Jay@rapidfixplumbing.uk</a></li>
+          <li>Edinburgh</li>
+          <li>24/7 emergency service</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fbar">
+      <span>Copyright &copy; 2026 Rapid Fix Plumbing. All rights reserved.</span>
+      <nav aria-label="Legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
